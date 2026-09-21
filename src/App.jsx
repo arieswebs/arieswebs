@@ -45,10 +45,10 @@ export default function App() {
     }));
     setStars(newStars);
 
-    const newComets = Array.from({ length: 8 }).map(() => ({
+    const newComets = Array.from({ length: 4 }).map(() => ({
       id: Math.random(),
-      top: Math.random() * 100 - 20,
-      left: Math.random() * 50 + 100,
+      top: Math.random() * 120 - 20, // -20 to 100
+      left: Math.random() * 120 - 10, // -10 to 110
       duration: Math.random() * 3 + 4,
       delay: Math.random() * 12
     }));
@@ -110,7 +110,15 @@ export default function App() {
           </svg>
         </motion.div>
 
-        <motion.h1 variants={itemVariants} style={{ fontFamily: '"Cinzel", serif', fontSize: '2.4rem', fontWeight: 500, marginBottom: '0.75rem', textAlign: 'center', letterSpacing: '1.5px', textShadow: '0 4px 12px rgba(0,0,0,0.5)', background: 'linear-gradient(to right, #fff, rgba(255,255,255,0.8))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+        <motion.div variants={itemVariants} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
+          <div style={{ height: '1px', width: '40px', background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.3))' }} />
+          <h2 style={{ fontFamily: '"Cinzel", serif', fontSize: '2rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '6px', color: '#fff', margin: 0, textShadow: '0 4px 12px rgba(0,0,0,0.5)', opacity: 0.9 }}>
+            Aries Webs
+          </h2>
+          <div style={{ height: '1px', width: '40px', background: 'linear-gradient(to left, transparent, rgba(255,255,255,0.3))' }} />
+        </motion.div>
+
+        <motion.h1 variants={itemVariants} style={{ fontFamily: '"Cinzel", serif', fontSize: '1.4rem', fontWeight: 500, marginBottom: '0.75rem', textAlign: 'center', letterSpacing: '1.5px', textShadow: '0 4px 12px rgba(0,0,0,0.5)', background: 'linear-gradient(to right, #fff, rgba(255,255,255,0.8))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
           Where Creativity Meets Horizon
         </motion.h1>
         <motion.p variants={itemVariants} style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', textAlign: 'center', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '85%', fontWeight: 300, letterSpacing: '0.2px' }}>
