@@ -12,7 +12,7 @@ const Star = ({ top, left, size, duration, delay }) => (
       width: `${size}px`,
       height: `${size}px`,
       '--twinkle-duration': `${duration}s`,
-      animationDelay: `${delay}s`
+      animationDelay: `-${delay}s`
     }}
   />
 );
@@ -35,21 +35,23 @@ export default function App() {
 
   useEffect(() => {
     // Generate premium subtle stars
-    const newStars = Array.from({ length: 120 }).map(() => ({
+    const newStars = Array.from({ length: 150 }).map(() => ({
       id: Math.random(),
       top: Math.random() * 100,
       left: Math.random() * 100,
-      size: Math.random() * 1.5 + 0.5,
+      size: Math.random() * 2 + 0.5,
       duration: Math.random() * 4 + 2,
-      delay: Math.random() * 5
+      delay: Math.random() * 10
     }));
     setStars(newStars);
 
-    const newComets = [
-      { id: 1, top: 15, left: 120, duration: 6, delay: 0 },
-      { id: 2, top: 45, left: 120, duration: 7.5, delay: 2 },
-      { id: 3, top: -5, left: 90, duration: 5, delay: 4.5 },
-    ];
+    const newComets = Array.from({ length: 8 }).map(() => ({
+      id: Math.random(),
+      top: Math.random() * 100 - 20,
+      left: Math.random() * 50 + 100,
+      duration: Math.random() * 3 + 4,
+      delay: Math.random() * 12
+    }));
     setComets(newComets);
   }, []);
 
