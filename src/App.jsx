@@ -110,15 +110,15 @@ export default function App() {
           </svg>
         </motion.div>
 
-        <motion.div variants={itemVariants} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
-          <div style={{ height: '1px', width: '40px', background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.3))' }} />
-          <h2 style={{ fontFamily: '"Cinzel", serif', fontSize: '2rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '6px', color: '#fff', margin: 0, textShadow: '0 4px 12px rgba(0,0,0,0.5)', opacity: 0.9 }}>
+        <motion.div variants={itemVariants} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'clamp(0.5rem, 2vw, 1rem)', marginBottom: '1.25rem' }}>
+          <div style={{ height: '1px', width: 'clamp(20px, 8vw, 40px)', background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.3))' }} />
+          <h2 style={{ fontFamily: '"Cinzel", serif', fontSize: 'clamp(1.35rem, 6vw, 2rem)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: 'clamp(3px, 1.5vw, 6px)', color: '#fff', margin: 0, textShadow: '0 4px 12px rgba(0,0,0,0.5)', opacity: 0.9 }}>
             Aries Webs
           </h2>
-          <div style={{ height: '1px', width: '40px', background: 'linear-gradient(to left, transparent, rgba(255,255,255,0.3))' }} />
+          <div style={{ height: '1px', width: 'clamp(20px, 8vw, 40px)', background: 'linear-gradient(to left, transparent, rgba(255,255,255,0.3))' }} />
         </motion.div>
 
-        <motion.h1 variants={itemVariants} style={{ fontFamily: '"Cinzel", serif', fontSize: '1.4rem', fontWeight: 500, marginBottom: '0.75rem', textAlign: 'center', letterSpacing: '1.5px', textShadow: '0 4px 12px rgba(0,0,0,0.5)', background: 'linear-gradient(to right, #fff, rgba(255,255,255,0.8))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+        <motion.h1 variants={itemVariants} style={{ fontFamily: '"Cinzel", serif', fontSize: 'clamp(1.1rem, 4.5vw, 1.4rem)', fontWeight: 500, marginBottom: '0.75rem', textAlign: 'center', letterSpacing: 'clamp(1px, 0.5vw, 1.5px)', textShadow: '0 4px 12px rgba(0,0,0,0.5)', background: 'linear-gradient(to right, #fff, rgba(255,255,255,0.8))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
           Where Creativity Meets Horizon
         </motion.h1>
         <motion.p variants={itemVariants} style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', textAlign: 'center', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '85%', fontWeight: 300, letterSpacing: '0.2px' }}>
