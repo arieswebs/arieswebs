@@ -95,7 +95,7 @@ export default function App() {
         variants={containerVariants}
       >
         <motion.div variants={itemVariants} style={{ marginBottom: '2rem', textAlign: 'center' }}>
-          <img src="/logo-new.png" alt="Aries Web Logo" style={{ width: '160px', mixBlendMode: 'screen', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='block'; }} />
+          <img src="/Symbol.png" alt="Aries Web Logo" style={{ width: '160px', mixBlendMode: 'screen', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='block'; }} />
           <svg style={{ display: 'none', width: '140px', height: '140px', margin: '0 auto', filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.4))' }} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M100 20 L60 140 L20 180 M100 20 L140 140 L180 180" stroke="url(#paint0_linear)" strokeWidth="3" strokeLinecap="round"/>
             <path d="M100 20 C 130 80 160 50 180 120" stroke="url(#paint0_linear)" strokeWidth="2.5" fill="transparent"/>
