@@ -127,11 +127,11 @@ export default function App() {
 
         <motion.div variants={itemVariants} style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
           <LinkCard icon={<StarIcon size={20} strokeWidth={1.5} />} text="Leave a Google Review" />
-          <LinkCard icon={<MessageCircle size={20} strokeWidth={1.5} />} text="WhatsApp Us" />
-          <LinkCard icon={<Camera size={20} strokeWidth={1.5} />} text="Follow on Instagram" />
-          <LinkCard icon={<Briefcase size={20} strokeWidth={1.5} />} text="Connect on LinkedIn" />
-          <LinkCard icon={<Globe size={20} strokeWidth={1.5} />} text="Visit Our Website" />
-          <LinkCard icon={<Mail size={20} strokeWidth={1.5} />} text="Email Us" />
+          <LinkCard icon={<MessageCircle size={20} strokeWidth={1.5} />} text="WhatsApp Us" href="https://wa.me/918714990618" />
+          <LinkCard icon={<Camera size={20} strokeWidth={1.5} />} text="Follow on Instagram" href="https://www.instagram.com/arieswebs/" />
+          <LinkCard icon={<Briefcase size={20} strokeWidth={1.5} />} text="Connect on LinkedIn" href="https://www.linkedin.com/company/aries-webs/" />
+          <LinkCard icon={<Globe size={20} strokeWidth={1.5} />} text="Visit Our Website" href="https://www.arieswebs.com" />
+          <LinkCard icon={<Mail size={20} strokeWidth={1.5} />} text="Email Us" href="mailto:info@arieswebs.com" />
         </motion.div>
 
         <motion.div variants={itemVariants} style={{ marginTop: '3.5rem', textAlign: 'center', fontSize: '0.85rem', color: 'var(--text-secondary)', letterSpacing: '0.5px' }}>
@@ -143,8 +143,8 @@ export default function App() {
   );
 }
 
-const LinkCard = ({ icon, text }) => (
-  <a href="#" className="link-card">
+const LinkCard = ({ icon, text, href = "#" }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer" className="link-card">
     <div className="icon-wrapper">{icon}</div>
     <span className="link-text">{text}</span>
     <ArrowRight className="arrow" size={20} strokeWidth={1.5} />
