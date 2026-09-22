@@ -126,7 +126,6 @@ export default function App() {
         </motion.p>
 
         <motion.div variants={itemVariants} style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
-          <LinkCard icon={<StarIcon size={20} strokeWidth={1.5} />} text="Leave a Google Review" />
           <LinkCard icon={<MessageCircle size={20} strokeWidth={1.5} />} text="WhatsApp Us" href="https://wa.me/918714990618" />
           <LinkCard icon={<Camera size={20} strokeWidth={1.5} />} text="Follow on Instagram" href="https://www.instagram.com/arieswebs/" />
           <LinkCard icon={<Briefcase size={20} strokeWidth={1.5} />} text="Connect on LinkedIn" href="https://www.linkedin.com/company/aries-webs/" />
